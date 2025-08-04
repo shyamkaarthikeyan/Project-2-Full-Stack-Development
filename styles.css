@@ -1,0 +1,128 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Login container - centers the card vertically and horizontally */
+.login-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Responsive padding for smaller screens */
+}
+
+/* Login card - the main form container */
+.login-card {
+    width: 350px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    /* 
+    box-sizing: border-box ensures that the 350px width includes 
+    padding and border, making the total size predictable 
+    */
+    box-sizing: border-box;
+}
+
+/* Heading styling */
+.login-card h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 28px;
+    font-weight: 300;
+}
+
+/* Form styling */
+.login-form {
+    width: 100%;
+}
+
+/* Form group container for each input field */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Label styling - left-aligned */
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* Input field styling - full width with proper padding */
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e1e1e1;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Input focus state */
+.form-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    background-color: #ffffff;
+}
+
+/* Submit button - spans full width of the card */
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+/* Button hover effect */
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Button active state */
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 400px) {
+    .login-card {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 10px;
+    }
+    
+    .login-container {
+        padding: 10px;
+    }
+}
